@@ -1,0 +1,361 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/dist/output.css" rel="stylesheet">
+    <link href="/src/service.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://unpkg.com/transition-style">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+	<link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+    <!-- <script src="./src/script.js"></script> -->
+    <!-- <link href="/dist/hamburgers.css" rel="stylesheet"> -->
+    <link href="dist/hamburgers.css" rel="stylesheet">
+    <title>Home</title>
+</head>
+<body class="bg-black">
+    <div class="bg-custom-red fixed z-[999] w-full h-full flex flex-col items-center justify-center preloader_bg">
+        <!-- <img class=" w-full h-full" src="./src/images/rotate_AdobeExpress.gif" alt="" /> -->
+        <p class="w-11/12 text-center text-[34px] sm:text-[46px] md:text-[56px] text-white font-garamond font-semibold h-fit m-auto"><span id="spin"></span></p>
+    </div>
+    <div class="h-screen w-full relative">
+        <div class="absolute top-0 py-6 w-11/12  left-0 z-[100] right-0 mx-auto flex flex-row items-center justify-between">
+            <img class="w-12" src="./src/images/cim_logo.png" />
+            <div class="relative cursor-pointer z-[100]" >
+                <button class="hamburger hamburger--spin" type="button" onclick="toggleNavbar">
+                    <span class="hamburger-box">
+                      <span class="hamburger-inner"></span>
+                    </span>
+                </button>
+            </div>
+            <div id="sideBar" transition-style class="sideBar --in-custom fixed h-[100vh] z-[49] font-garamond bg-custom-red left-0 right-0 top-0 bottom-0 mx-auto flex flex-col items-center justify-center overflow-hidden opacity-100 transition-all ease-in duration-500 hidden" >
+                <div class="flex flex-col gap-2 md:gap-0 text-[34px] sm:text-[46px] md:text-[56px] font-semibold w-full h-fit text-center items-center justify-center text-white">
+                   <a href="index.html"> <p class="cursor-pointer md:hover:text-gray-500 active:text-gray-500">Home</p></a>
+                    <a href="about.html"> <p class="cursor-pointer md:hover:text-gray-500 active:text-gray-500">About</p></a>
+                        <a href="services.html">  <p class="cursor-pointer md:hover:text-gray-500 active:text-gray-500">Our Services</p></a>
+                            <a href="index.html">  <p class="cursor-pointer md:hover:text-gray-500 active:text-gray-500">Fan Zone</p></a>
+                                <a href="index.html"> <p class="cursor-pointer md:hover:text-gray-500 active:text-gray-500">Sport Creative</p></a>
+                                    <a href="contact.html"> <p class="cursor-pointer md:hover:text-gray-500 active:text-gray-500">Contact</p></a>
+                </div>
+            </div>
+        </div>
+        <video id="bg_video" class="w-screen h-screen sm:h-screen absolute object-cover z-[-100] brightness-[0.35]" preload="auto" autoPlay loop muted playsInline>
+            <source src="./src/videos/Produce_9.mp4" type="video/mp4" />
+        </video>
+       
+        <div class="owl-carousel owl-theme ">
+            <div class="item">
+                <div class="w-11/12  mx-auto h-screen flex items-center">
+                    <div class=" sm:w-full md:w-[700px] md:min-w-[700px] h-fit space-y-5">
+                        <h1 class="text-[34px] sm:text-[46px] md:text-[56px] font-semibold text-white font-garamond leading-none">
+                            What We Do
+                        </h1>
+                        <p class="text-white text-sm">
+                            We are a Marketing Communications and advertising consultancy firm. We have vast experience in the organization of major sporting events and football, as a sport is one of its sporting focus areas.
+                        </p>
+                        <p class="text-white px-6 py-3 border border-gray-500 w-fit cursor-pointer font-semibold text-base discover-button bg-dark-bg backdrop-blur-sm">Learn More</p> 
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+    <div class=" relative h-fit bg-white overflow-hidden">
+        <div class=" h-fit w-11/12 py-8 md:py-16 mx-auto flex flex-row justify-between gap-3">
+            <div class="" >
+                <!-- <p class="pl-5 border-l-4 border-custom-red font-semibold text-custom-red">About Us</p> -->
+                <div class="w-fit flex flex-row items-center gap-3 mb-2" data-aos="slide-right"
+                data-aos-duration="900"
+                data-aos-easing="ease-out-quart">
+                    <div class="w-10 h-1 bg-custom-red rounded-full"> </div>
+                    <h1 class="w-fit font-bold text-[34px] sm:text-[46px] md:text-[56px] font-garamond mb-0 py-0" >Our Services</h1>
+                    <div class="w-10 h-1 bg-custom-red rounded-full"> </div>
+                </div>
+                <div class="containers" style="position: relative;">
+                    <div class="container1" style="position: relative;" data-aos="slide-up"
+                    data-aos-duration="900"
+                    data-aos-easing="ease-out-quart">
+                        <div class="card1">
+                            
+                            <img src="/src/images/bac.jpg">
+                            <div class="intro1">
+                                <h1>Marketing & <br>Brand Communication</h1>
+                                <p>Communications tell the story of a brand while marketing does the work of advertising the product.</p>
+                            </div>
+                        </div>
+    
+                    </div>
+                    <div class="container1" style="position: relative;" data-aos="slide-up"
+                    data-aos-duration="900"
+                    data-aos-easing="ease-out-quart">
+                        <div class="card1">
+                        
+                            <img src="/src/images/prod.jpg" >
+                            <div class="intro1">
+                                <h1>Project & <br>Business Development</h1>
+                                <p>We help our clients identify new business opportunities in order to generate revenue and profitability</p>
+                            </div>
+                        </div>
+
+                    </div>
+                    
+                    <div class="container1" style="position: relative;" data-aos="slide-up"
+                    data-aos-duration="900"
+                    data-aos-easing="ease-out-quart">
+                        <div class="card1">
+                        
+                            <img src="/src/images/conti.jpg">
+                            <div class="intro1">
+                                <h1>Content Development & <br>PR Solutions</h1>
+                                <p>We offer content creation services and public relation services for the growth of your business</p>
+                            </div>
+                        </div>
+
+                    </div>
+                   
+                        <div class="container1" style="position: relative;" data-aos="slide-up"
+                        data-aos-duration="900"
+                        data-aos-easing="ease-out-quart">
+                            <div class="card1">
+                                
+                                <img src="/src/images/bren.jpg">
+                                <div class="intro1">
+                                    <h1>Corporate Branding & <br>Interactive Media</h1>
+                                    <p>We use Interactive media to help our clients promote products through social media marketing</p>
+                                </div>
+                            </div>
+        
+                        </div>
+                        <div class="container1" style="position: relative;" data-aos="slide-up"
+                        data-aos-duration="900"
+                        data-aos-easing="ease-out-quart">
+                            <div class="card1">
+                            
+                                <img src="/src/images/vkkl.jpg" >
+                                <div class="intro1">
+                                    <h1>Event Marketing & <br>Management</h1>
+                                    <p>We help our clients plan, organize, execute, and advertise events</p>
+                                </div>
+                            </div>
+    
+                        </div>
+                        
+                        <div class="container1" style="position: relative;" data-aos="slide-up"
+                        data-aos-duration="900"
+                        data-aos-easing="ease-out-quart">
+                            <div class="card1">
+                            
+                                <img src="/src/images/fdd.jpg">
+                                <div class="intro1">
+                                    <h1>Sports <br>Marketing</h1>
+                                    <p>We help our clients promote sports events as well as the promotion of other services.</p>
+                                </div>
+                            </div>
+    
+                        </div>
+                    
+                    </div>
+                
+                </div>
+                
+                
+                
+                
+
+            </div>
+        </div>
+    </div>
+    
+    <div class=" bg-contact-image bg-center bg-cover bg-no-repeat bg-fixed">
+        <div class=" w-11/12 mx-auto text-white flex flex-col md:flex-row justify-between items-center">
+            <div class="py-8 md:py-16" data-aos="zoom-out"
+            data-aos-duration="900"
+            data-aos-easing="ease-out-quart">
+                <h1 class="w-fit font-bold text-[34px] sm:text-[46px] md:text-[56px] max-w-[650px] font-garamond text-custom-red leading-none mb-3">Make us a part of your success story</h1>
+                <p class="max-w-[650px] ">Get in touch and see how our industry expertise can help you achieve your business goal.</p>
+            </div>
+            <div class="pb-8 md:py-16">
+                <a class="w-fit h-fit" href="contact.html">
+                    <p class="px-6 py-4 border border-gray-500 w-fit cursor-pointer text-base discover-button bg-dark-bg backdrop-blur-sm text-white font-medium mx-auto">Contact Us</p>
+                </a>
+            </div>
+        </div>
+    </div>
+    <footer class="pt-8 md:pt-16 pb-5 ">
+        <div class="w-11/12 mx-auto flex flex-col md:flex-row gap-4 md:gap-0 md:justify-between md:items-start " data-aos="slide-up"
+        data-aos-duration="900"
+        data-aos-easing="ease-out-quart">
+            <div>
+                <div>
+                    <img src="./src/images/cim_logo.png" class="w-14 h-14 mb-3.5 alt="">
+                    <p class="text-sm text-white font-medium w-full md:max-w-[350px]">Grow your business with Clean Image Limited. We are one call Away.</p>
+                </div>
+            </div>
+            <div class="w-fit mx-auto md:mx-0 text-white space-y-3 font-medium"> 
+                <p class="font-semibold mx-auto mt-3 md:mt-0 md:mx-0 text-center md:text-left">Quick Links</p>
+                <div class="flex flex-col items-center md:items-start gap-2 text-sm mx-auto md:mx-0 text-center md:text-left"> 
+                    <a href="index.html" class="w-fit h-fit"> <p class="cursor-pointer active:text-custom-red md:hover:text-custom-red">Home</p> </a>
+                    <a href="services.html" class="w-fit h-fit"><p class="cursor-pointer active:text-custom-red md:hover:text-custom-red">Our Services</p></a>
+                    <a href="contact.html" class="w-fit h-fit"> <p class="cursor-pointer active:text-custom-red md:hover:text-custom-red">Contact Us</p></a>
+                    <a href="index.html" class="w-fit h-fit"> <p class="cursor-pointer active:text-custom-red md:hover:text-custom-red">Fan Zone</p></a>
+                    <a href="index.html" class="w-fit h-fit"> <p class="cursor-pointer active:text-custom-red md:hover:text-custom-red">Sports Creative</p></a>
+                </div>  
+                <div class="flex flex-row gap-3">
+                    <div class="w-8 border border-gray-900 discover-button cursor-pointer flex flex-row justify-center items-center p-2 active:bg-custom-red hover:bg-custom-red"><img class="w-4" src='./src/images/facebookicon.png' alt='socials'/></div>
+                    <div class="w-8 border border-gray-900 discover-button cursor-pointer flex flex-row justify-center items-center p-2 active:bg-custom-red hover:bg-custom-red"><img class="w-4" src='./src/images/twittericon.png' alt='socials'/></div>
+                    <div class="w-8 border border-gray-900 discover-button cursor-pointer flex flex-row justify-center items-center p-2 active:bg-custom-red hover:bg-custom-red"><img class="w-5" class='smallericon' src='./src/images/linkedinicon.png' alt='socials'/></div>
+                </div>              
+            </div>
+        </div>
+        <div class="w-11/12 mx-auto text-white pt-5">
+            <p class="mx-auto w-fit text-sm">© 2023 Clean Image Limited. All rights reserved.</p>
+        </div>
+    </footer>
+    <!-- We partner with you to continually evolve and optimize to reflect the changing needs of your business. -->
+    
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js" integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js" type="text/javascript"></script>
+  <script>jQuery.noConflict(true);</script>
+  <script src="./src/script.js"></script>
+  <script>
+    $('.owl-carousel').owlCarousel({
+        items : 1,
+        mouseDrag: true,
+        touchDrag: true,
+        
+        autoHeight: true,
+        
+        animateOut: false,
+        animateIn: false,
+        autoplayHoverPause:false,
+        stopOnHover:false,
+        
+        lazyLoad : false,
+        loop: true,
+        
+        autoplay : true,
+        autoplayTimeout: 5000,
+        autoplayHoverPause: true,
+        autoplaySpeed: 500,
+        
+        nav : false,
+        navSpeed : 500,
+        navText: [ '', '' ],
+        
+        dots: false,
+        dotsSpeed : 500,
+        
+        responsiveClass: true,
+        responsive:{
+        0:{
+            nav:false
+        },
+        450:{
+            nav : false
+        },
+        
+    }
+    })
+    var owl = $('.owl-carousel');
+    owl.owlCarousel();
+    $('.customNextBtn').click(function() {
+        owl.trigger('next.owl.carousel');
+    })
+    // Go to the previous item
+    $('.customPrevBtn').click(function() {
+        owl.trigger('prev.owl.carousel');
+    })
+    owl.on('changed.owl.carousel', function(property) {
+        var currentIndex = property.item.index - 1;
+        var count = property.item.count;
+        if (currentIndex > count) {
+            currentIndex -= count;
+        }
+        if (currentIndex <= 0) {
+            currentIndex += count;
+        }
+        $('#currentSlide').text(currentIndex);
+    })
+    // $( ".arrow-icon" ).click(function() {
+    //     $(this).toggleClass("open");
+    // });
+    $( ".service_container" ).click(function() {
+        $(this).toggleClass("open");
+    });
+  </script>
+  <script> 
+    // Look for .hamburger and sidebar7
+    let toggled = false;
+    var hamburger = document.querySelector(".hamburger");
+    var sideBar = document.querySelector(".sideBar");
+    // On click
+    hamburger.addEventListener("click", function() {
+      // Toggle class "is-active"
+      hamburger.classList.toggle("is-active");
+      hamburger.classList.toggle("fixed");
+
+      hamburger.classList.toggle("right-[4.2%]");
+      hamburger.classList.toggle("top-6");
+      sideBar.classList.toggle("hidden");
+      // Do something else, like open/close menu
+      if (toggled){
+        // sideBar.classList.toggle("hidden");
+        sideBar.classList.toggle("in-circle-swoop");
+      }else{
+        // sideBar.classList.toggle("hidden");
+        sideBar.classList.toggle("out-circle-swoop");
+      }
+    //   document.body.classList.toggle('lock-scroll');
+    });
+    
+    window.addEventListener("load", function(){
+        $(".preloader_bg").fadeToggle();
+        // $("#bg_video")[0].pause();
+        $("#bg_video")[0].play();
+        const videoElement = document.getElementById('bg_video');
+
+        videoElement.addEventListener('suspend', () => {
+            videoElement.play();
+        });
+        // $("#bg_video")[0].addEventListener('play', () => {
+        //     // $("#bg_video")[0].play();
+        //     console.log("Playing")
+        // });
+        
+        if (videoElement.playing) {
+            // video is already playing so do nothing
+        }
+        else {
+            // video is not playing
+            // so play video now
+            videoElement.play();
+        }
+    })
+
+
+
+  </script>
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init({ once: true });
+  </script>
+</body>
+</html>

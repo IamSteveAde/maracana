@@ -1,0 +1,726 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/dist/output.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://unpkg.com/transition-style">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <script src="https://kit.fontawesome.com/fbef12b2c8.js" crossorigin="anonymous"></script>
+    <!-- <script src="./src/script.js"></script> -->
+    <!-- <link href="/dist/hamburgers.css" rel="stylesheet"> -->
+    <link href="dist/hamburgers.css" rel="stylesheet">
+    <title>Home</title>
+</head>
+<body class="bg-black">
+    <div class="bg-custom-red fixed z-[999] w-full h-full flex flex-col items-center justify-center preloader_bg">
+        <!-- <img class=" w-full h-full" src="./src/images/rotate_AdobeExpress.gif" alt="" /> -->
+        <p class="w-11/12 text-center text-[34px] sm:text-[46px] md:text-[56px] text-custom-wine font-garamond font-semibold h-fit m-auto"><span id="spin"></span></p>
+    </div>
+    <div class="h-screen w-full relative">
+        <div class="absolute top-0 py-6 w-11/12  left-0 z-[100] right-0 mx-auto flex flex-row items-center justify-between">
+            <img class="w-[100px]" src="./src/images/image0__2_-removebg-preview.png" />
+            <div class="relative cursor-pointer z-[100]" >
+                <button class="hamburger hamburger--spin" type="button" onclick="toggleNavbar">
+                    <span class="hamburger-box">
+                      <span class="hamburger-inner"></span>
+                    </span>
+                </button>
+                
+            </div>
+            <div id="sideBar" transition-style class="sideBar --in-custom fixed h-[100vh] z-[49] font-garamond bg-custom-red left-0 right-0 top-0 bottom-0 mx-auto flex flex-col items-center justify-center overflow-hidden opacity-100 transition-all ease-in duration-500 hidden" >
+                <div class="flex flex-col gap-2 md:gap-0 text-[34px] sm:text-[46px] md:text-[56px] font-semibold w-full h-fit text-center items-center justify-center text-white">
+                   <a href=""> <p class="cursor-pointer md:hover:text-gray-500 active:text-gray-500">Home</p></a>
+                    <a href=""> <p class="cursor-pointer md:hover:text-gray-500 active:text-gray-500">About</p></a>
+                        <a href="">  <p class="cursor-pointer md:hover:text-gray-500 active:text-gray-500">Gallary</p></a>
+                            <a href="">  <p class="cursor-pointer md:hover:text-gray-500 active:text-gray-500">Menu</p></a>
+                            
+                            <a href="">  <p class="cursor-pointer md:hover:text-gray-500 active:text-gray-500">Reviews</p></a>
+                                <a href=""> <p class="cursor-pointer md:hover:text-gray-500 active:text-gray-500">Reservations</p></a>
+                                    
+                </div>
+            </div>
+        </div>
+        <video id="bg_video" class="w-screen h-screen sm:h-screen absolute object-cover z-[-100] brightness-[0.35]" preload="auto" autoPlay loop muted playsInline>
+            <source src="./src/videos/Video (2).mov" type="video/mp4" />
+        </video>
+        <div class="max-[935px]:hidden absolute z-10 right-20 top-0 bottom-0 my-auto w-fit h-10 overflow-hidden text-white flex gap-3 items-center">
+            <div class="customPrevBtn h-full group flex cursor-pointer items-center relative">
+                <p class="cursor-pointer group-hover:-translate-y-8 transition-all ease-in w-full py-3">Prev</p>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon line w-10 absolute h-10 hidden group-hover:block" viewBox="0 0 24 24"><path d="M21 12H3m3-3-3 3 3 3" style="fill:none;stroke:#fff;stroke-linecap:round;stroke-linejoin:round;stroke-width:1.5"/></svg>
+            </div>
+            <div class="w-12 bg-white h-0.5"></div>
+            <div class="customNextBtn h-full group flex cursor-pointer items-center relative">
+                <p class="cursor-pointer group-hover:-translate-y-8 transition-all ease-in w-full py-3 ">Next</p>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon line w-10 absolute h-10 hidden group-hover:block rotate-180" viewBox="0 0 24 24"><path d="M21 12H3m3-3-3 3 3 3" style="fill:none;stroke:#fff;stroke-linecap:round;stroke-linejoin:round;stroke-width:1.5"/></svg>
+            </div>
+        </div>
+        <div class="absolute left-[4%] bottom-10 flex items-start gap-1 overflow-hidden font-serif">
+            <p class="text-white font-semibold -ml-3.5 text-5xl">0<span id="currentSlide">1</span> </p><span class="text-sm align-super text-white font-medium">/3</span>
+        </div>
+        <div class="owl-carousel owl-theme ">
+            <div class="item">
+                <div class="w-11/12  mx-auto h-screen flex items-center">
+                    <div class=" sm:w-full md:w-[700px] md:min-w-[700px] h-fit space-y-5">
+                        <h1 class="text-[34px] sm:text-[46px] md:text-[56px] font-semibold text-white font-garamond leading-none">
+                            Welcome to Maracana Lounge
+                        </h1>
+                        <p class="text-white text-lg">
+                            We cordially invite you to be a part of the Maracana 
+                             Lounge experience. Maracana  is an haven for fun and adventure
+                        </p>
+                        <p class="text-white px-6 py-3 border border-gray-500 w-fit cursor-pointer font-semibold text-base discover-button bg-dark-bg backdrop-blur-sm">Discover More</p> 
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="w-11/12  mx-auto h-screen flex items-center">
+                    <div class=" sm:w-full md:w-[700px] md:min-w-[700px] h-fit space-y-5">
+                        <h1 class="text-[34px] sm:text-[46px] md:text-[56px] font-semibold text-white font-garamond leading-none">
+                            The Wednesdays Ladies Night
+                        </h1>
+                        <p class="text-white text-lg ">
+                            Ladies, get ready to be pampered and celebrated every Wednesday night at Maracana Lounge during our exclusive 
+                            "Ladies Night" event! </p>
+                        <p class="text-white px-6 py-3 border border-gray-500 w-fit cursor-pointer font-semibold text-base discover-button bg-dark-bg backdrop-blur-sm">Discover More</p>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="w-11/12  mx-auto h-screen flex items-center">
+                    <div class=" sm:w-full md:w-[700px] md:min-w-[700px] h-fit space-y-5">
+                        <h1 class="text-[34px] sm:text-[46px] md:text-[56px] font-semibold text-white font-garamond leading-none">
+                            The Fridays Good Night Vibes
+                        </h1>
+                        <p class="text-white text-lg font-medium">
+                            Join us every Friday night at Maracana Lounge for our highly anticipated
+                             event, where the weekend spirit comes alive.  </p>
+                        <p class="text-white px-6 py-3 border border-gray-500 w-fit cursor-pointer font-semibold text-base discover-button bg-dark-bg backdrop-blur-sm">Discover More</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class=" relative h-fit bg-white overflow-hidden">
+        <div class=" h-fit w-11/12 py-8 md:py-16 mx-auto flex flex-row justify-between gap-3">
+            <div class="" >
+                <!-- <p class="pl-5 border-l-4 border-custom-red font-semibold text-custom-red">About Us</p> -->
+                <div class="w-fit flex flex-row items-center gap-3 mb-2" data-aos="slide-right"
+                data-aos-duration="900"
+                data-aos-easing="ease-out-quart">
+                    <div class="w-10 h-1 bg-custom-red rounded-full"> </div>
+                    <h1 class="w-fit font-bold text-[34px] sm:text-[46px] md:text-[56px] font-garamond mb-0 py-0" >Maracana Lounge</h1>
+                    <div class="w-10 h-1 bg-custom-red rounded-full"> </div>
+                </div>
+                <div class=" sm:h-[400px] md:hidden" >
+                    <img src="./src/images/9971C342-A45E-4270-8AA6-D88CF1E6F7B3.JPG" class="h-full w-full object-cover object-center"/>
+                   
+                </div>
+                <p class="font-medium max-w-[700px] mb-4 pr-0 md:pr-5" data-aos="slide-up"
+                data-aos-duration="900"
+                data-aos-easing="ease-out-quart">
+                Welcome to Maracana Lounge, where relaxation meets sophistication.
+                 Nestled in the heart of the city, Maracana Lounge is a haven designed to elevate your leisure experience.
+                  With a commitment to providing exceptional service, a refined ambiance,
+                 and a curated selection of premium offerings, we invite you to indulge in an unforgettable journey of pleasure and tranquility.
+                    <!-- We began as a group of professional sports administrators drawn from the global sports industry with the common vision of advancing 
+                    the development of sports globally with a strategic interest in emerging sporting nations. -->
+                </p>
+                
+                <p class="font-medium max-w-[700px] mb-6 pr-0 md:pr-5 " data-aos="slide-up"
+                data-aos-duration="900"
+                data-aos-easing="ease-out-quart">
+                At Maracana Lounge, we take pride in curating a meticulously crafted selection of offerings to satisfy the most discerning of tastes. Our impressive array of spirits, wines, and artisanal cocktails is a testament to our commitment to quality. Our expert mixologists are artists in their own right, ready to concoct the perfect libation tailored to your preferences. 
+                For those who prefer non-alcoholic options, our handcrafted mocktails and refreshing beverages are equally delightful.
+                </p>
+               <a href=""> <p class=" px-6 py-3  border border-gray-500 w-fit cursor-pointer text-base discover-button  backdrop-blur-sm text-black font-semibold" data-aos="zoom-out"
+                data-aos-duration="900"
+                data-aos-easing="ease-out-quart">Read More</p> </a>
+            </div>
+            <div class=" hidden md:block"  >
+                <img src="./src/images/9971C342-A45E-4270-8AA6-D88CF1E6F7B3.JPG" class="h-full w-[500px] rounded-full "/>
+                
+
+            </div>
+        </div>
+    </div>
+    <div class="pt-8 md:pt-16 w-full md:w-11/12 mx-auto bg-fanzone-image bg-cover bg-no-repeat bg-center bg-fixed overflow-hidden">
+        <div class="pb-8 md:pb-16 w-11/12 mx-auto md:w-full" >
+            <h1 class="w-fit font-bold text-[34px] sm:text-[46px] md:text-[56px] font-garamond text-white mx-auto mb-0" data-aos="zoom-out"
+            data-aos-duration="900"
+            data-aos-easing="ease-out-quart">Our Gallery</h1>
+            <div class="w-10 h-1 bg-custom-red rounded-full mx-auto -mt-2 mb-6"> </div>
+            <p class="text-white font-medium mx-auto w-fit text-center my-3" data-aos="slide-right"
+            data-aos-duration="900"
+            data-aos-easing="ease-out-quart"> Journey through our Lounge: A Visual Delight.</p>
+            <p class="px-10 py-3 border border-gray-500 w-fit cursor-pointer text-base discover-button bg-dark-bg backdrop-blur-sm text-white font-medium mx-auto" data-aos="zoom-in"
+            data-aos-duration="900"
+            data-aos-easing="ease-out-quart">Visit</p> 
+        </div>
+        <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4"> 
+            <div class="row-span-1 col-span-2 sm:col-span-1 sm:row-span-2  md:row-span-1 overflow-hidden" data-aos="zoom-out"
+            data-aos-duration="900"
+            data-aos-easing="ease-out-quart">
+                <img class="w-full h-full object-cover transition-all duration-700 ease-in-out transform hover:scale-125 hover:brightness-50 cursor-pointer" src="./src/images/99B340EB-B005-403E-A68E-27C8FF83B1D0.JPG" alt="" />
+            </div>
+            <div class="row-span-2 col-span-2 md:col-span-1 overflow-hidden" data-aos="zoom-out
+            data-aos-duration="900"
+            data-aos-easing="ease-out-quart">
+                <img class="w-full h-full object-cover transition-all duration-700 ease-in-out transform hover:scale-125 hover:brightness-50 cursor-pointer" src="./src/images/1911BA2E-4A9F-4D31-9777-50358BBC0366.JPG" alt="" />
+            </div>
+            <div class="sm:col-span-2 row-span-2 overflow-hidden" data-aos="zoom-out"
+            data-aos-duration="900"
+            data-aos-easing="ease-out-quart">
+                <img class="w-full h-full object-cover transition-all duration-700 ease-in-out transform hover:scale-125 hover:brightness-50 cursor-pointer" src="./src/images/BBAF9A0C-7884-4E8B-A62B-4A07BD8A1129.JPG" alt="" />
+            </div>
+            <div class="row-span-1 overflow-hidden" data-aos="zoom-out"
+            data-aos-duration="900"
+            data-aos-easing="ease-out-quart">
+                <img class="w-full h-full object-cover transition-all duration-700 ease-in-out transform hover:scale-125 hover:brightness-50 cursor-pointer" src="./src/images/9971C342-A45E-4270-8AA6-D88CF1E6F7B3.JPG" alt="" />
+            </div>
+            <div class="row-span-1 overflow-hidden" data-aos="zoom-out"
+            data-aos-duration="900"
+            data-aos-easing="ease-out-quart">
+                <img class="w-full h-full object-cover transition-all duration-700 ease-in-out transform hover:scale-125 hover:brightness-50 cursor-pointer" src="./src/images/A6C83EFE-4870-4B47-819F-194426F4B7BE.JPG" alt="" />
+            </div>
+            <div class="col-span-2 sm:col-span-1 row-span-1 overflow-hidden" data-aos="zoom-out"
+            data-aos-duration="900"
+            data-aos-easing="ease-out-quart">
+                <img class="w-full h-full object-cover transition-all duration-700 ease-in-out transform hover:scale-125 hover:brightness-50 cursor-pointer" src="./src/images/BBB927AC-45F3-48C7-8F69-823B4A26D1A5.JPG" alt="" />
+            </div>
+            <div class="col-span-2 overflow-hidden" data-aos="zoom-out"
+            data-aos-duration="900"
+            data-aos-easing="ease-out-quart">
+                <img class="w-full h-full object-cover transition-all duration-700 ease-in-out transform hover:scale-125 hover:brightness-50 cursor-pointer" src="./src/images/9971C342-A45E-4270-8AA6-D88CF1E6F7B3.JPG" alt="" />
+            </div>
+        </div>
+    </div>
+    <video id="bg_video" class="w-screen h-screen sm:h-screen absolute object-cover z-[-100] brightness-[0.35]" preload="auto" autoPlay loop muted playsInline>
+        <source src="./src/videos/1118689_4k_Astronomy_Stars_3840x2160.mp4" type="video/mp4" />
+    </video>
+    <div class="pt-8 md:pt-16 w-full md:w-11/12 mx-auto bg-fanszone-image bg-cover bg-no-repeat bg-center bg-fixed">
+        <div class="pb-8 md:pb-16 w-11/12 mx-auto md:w-full" >
+            <h1 class="w-fit font-bold text-[34px] sm:text-[46px] md:text-[56px] font-garamond text-white mx-auto mb-0" data-aos="zoom-out"
+            data-aos-duration="900"
+            data-aos-easing="ease-out-quart">MENU</h1>
+            <div class="w-10 h-1 bg-custom-red rounded-full mx-auto -mt-2 mb-6"> </div>
+            <p class="text-white font-medium mx-auto w-fit text-center my-3" data-aos="slide-right"
+            data-aos-duration="900"
+            data-aos-easing="ease-out-quart"> Check out our Menu</p>
+
+            <div class="max-[935px]:hidden text-center z-10 right-220 top-0 bottom-0 my-auto w-fit h-10 overflow-hidden text-white flex gap-3 items-center">
+                <div class="customPrevBtn h-full group flex cursor-pointer items-center relative">
+                    <p class="cursor-pointer group-hover:-translate-y-8 transition-all ease-in w-full py-3">Prev</p>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon line w-10 absolute h-10 hidden group-hover:block" viewBox="0 0 24 24"><path d="M21 12H3m3-3-3 3 3 3" style="fill:none;stroke:#fff;stroke-linecap:round;stroke-linejoin:round;stroke-width:1.5"/></svg>
+                </div>
+                <div class="w-12 bg-white h-0.5"></div>
+                <div class="customNextBtn h-full group flex cursor-pointer items-center relative">
+                    <p class="cursor-pointer group-hover:-translate-y-8 transition-all ease-in w-full py-3 ">Next</p>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon line w-10 absolute h-10 hidden group-hover:block rotate-180" viewBox="0 0 24 24"><path d="M21 12H3m3-3-3 3 3 3" style="fill:none;stroke:#fff;stroke-linecap:round;stroke-linejoin:round;stroke-width:1.5"/></svg>
+                </div>
+            </div>
+            
+           
+            
+            <div class="owl-carousel owl-theme">
+                
+                
+             
+                <div class="text-white w-1/2  my-3 h-96 pt-8 md:pt-16 w-full my-14 md:w-7/12 mx-auto bg-store-image bg-cover bg-no-repeat bg-center bg-fixed overflow-hidden hover:cursor-pointer hover:brightness-100">
+                    <div class="relative sm:top-10">
+                        <h2 class="w-fit font-bold text-[34px] sm:text-[46px] md:text-[56px] font-garamond text-red mx-auto mb-0">Cocktails</h2>
+                        <p class="text-center">Savor the artistry of our artisanal cocktails, expertly crafted to<br> elevate your palate and enhance your Maracana Lounge experience.
+                        <p class="px-10 py-3 my-3 border border-gray-500 w-fit cursor-pointer text-base discover-button bg-dark-bg backdrop-blur-sm text-white font-medium mx-auto" data-aos="zoom-in"
+                            data-aos-duration="900"
+                            data-aos-easing="ease-out-quart">Visit
+                        </p>
+                    </div> 
+                </div>
+                <div class="text-white w-1/2 my-3 h-96 pt-8 md:pt-16 w-full my-14 md:w-7/12 mx-auto bg-store1-image bg-cover bg-no-repeat bg-center bg-fixed overflow-hidden hover:cursor-pointer hover:brightness-100">
+                    <div class="relative sm:top-10">
+                        <h2 class="w-fit font-bold text-[34px] sm:text-[46px] md:text-[56px] font-garamond text-red mx-auto mb-0">Wines</h2>
+                        <p class="text-center">Indulge in the elegance of our exquisite wine collection,<br> thoughtfully selected to elevate your senses at Maracana Lounge.
+                        </p>
+                        <p class="px-10 py-3 my-3 border border-gray-500 w-fit cursor-pointer text-base discover-button bg-dark-bg backdrop-blur-sm text-white font-medium mx-auto" data-aos="zoom-in"
+                            data-aos-duration="900"
+                            data-aos-easing="ease-out-quart">Visit
+                        </p> 
+                    </div>    
+                    
+                </div>
+                <div class="text-white w-1/2 my-3 h-96 pt-8 md:pt-16 w-full my-14 md:w-7/12 mx-auto bg-store2-image bg-cover bg-no-repeat bg-center bg-fixed overflow-hidden hover:cursor-pointer hover:brightness-100">
+                    <div class="relative sm:top-10 s:w-1/2">
+                        <h2 class="w-fit font-bold text-[34px] sm:text-[46px] md:text-[56px] font-garamond text-red mx-auto mb-0">Beers</h2>
+                        <p class="text-center"> 
+                            Experience the finest selection of handcrafted beers, meticulously<br> curated to delight your taste buds at Maracana Lounge. 
+                        </p>
+                        <p class="px-10 py-3 my-3 border border-gray-500 my-3 w-fit cursor-pointer text-base discover-button bg-dark-bg backdrop-blur-sm text-white font-medium mx-auto" data-aos="zoom-in"
+                            data-aos-duration="900"
+                            data-aos-easing="ease-out-quart">Visit
+                        </p>
+                    </div>    
+                </div>
+                <div class="text-white w-1/2 my-3 py-12 h-96 pt-8 md:pt-16 w-full my-14 md:w-7/12 mx-auto bg-store3-image bg-cover bg-no-repeat bg-center bg-fixed overflow-hidden hover:cursor-pointer hover:brightness-100">
+                    <div class="relative sm:top-10 s:w-1/2"> 
+                        <h2 class="w-fit font-bold text-[34px] sm:text-[46px] md:text-[56px] font-garamond text-red mx-auto mb-0">Non-Alcoholic Drinks</h2>
+                        <p class="text-center s:w-1"> 
+                            Discover a refreshing world of non-alcoholic beverages, where innovative flavors<br> and delightful concoctions await at Maracana Lounge.
+                        </p>
+                        <p class="px-10 py-3 my-3 border border-gray-500 my-3 w-fit cursor-pointer text-base discover-button bg-dark-bg backdrop-blur-sm text-white font-medium mx-auto" data-aos="zoom-in"
+                            data-aos-duration="900"
+                            data-aos-easing="ease-out-quart">Visit
+                        </p>
+                    </div>    
+                </div>
+                <div class="text-white w-1/2 my-3 py-12 h-96 pt-8 md:pt-16 w-full my-14 md:w-7/12 mx-auto bg-store4-image bg-cover bg-no-repeat bg-center bg-fixed overflow-hidden hover:cursor-pointer hover:brightness-100">
+                    <div class="relative sm:top-10 s:w-1/2"> 
+                        <h2 class="w-fit font-bold text-[34px] sm:text-[46px] md:text-[56px] font-garamond text-red mx-auto mb-0">Food</h2>
+                        <p class="text-center s:w-1"> Experience a culinary journey of delectable bites and savory delights, <br>perfectly paired to complement your drinks at Maracana Lounge.  
+                        </p>
+                        <p class="px-10 py-3 my-3 border border-gray-500 my-3 w-fit cursor-pointer text-base discover-button bg-dark-bg backdrop-blur-sm text-white font-medium mx-auto" data-aos="zoom-in"
+                            data-aos-duration="900"
+                            data-aos-easing="ease-out-quart">Visit
+                        </p>
+                    </div>    
+                </div>
+                
+            </div>
+                 
+        </div>
+        <video id="bg_video" class="w-screen h-screen sm:h-screen absolute object-cover z-[-100] brightness-[0.35]" preload="auto" autoPlay loop muted playsInline>
+            <source src="./src/videos/1118689_4k_Astronomy_Stars_3840x2160.mp4" type="video/mp4" />
+        </video>
+        <div class="pb-8 md:pb-16 w-11/12 mx-auto md:w-full" >
+            <h1 class="w-fit font-bold text-[34px] sm:text-[46px] md:text-[56px] font-garamond text-white mx-auto mb-0" data-aos="zoom-out"
+            data-aos-duration="900"
+            data-aos-easing="ease-out-quart">Reviews & Testimonials</h1>
+            <div class="w-10 h-1 bg-custom-red rounded-full mx-auto -mt-2 mb-6"> </div>
+            <p class="text-white font-medium mx-auto w-fit text-center my-3" data-aos="slide-right"
+            data-aos-duration="900"
+            data-aos-easing="ease-out-quart"> Check out what our Customers are saying</p>
+
+            <div class="max-[935px]:hidden text-center z-10 right-220 top-0 bottom-0 my-auto w-fit h-10 overflow-hidden text-white flex gap-3 items-center">
+                <div class="customPrevBtn h-full group flex cursor-pointer items-center relative">
+                    <p class="cursor-pointer group-hover:-translate-y-8 transition-all ease-in w-full py-3">Prev</p>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon line w-10 absolute h-10 hidden group-hover:block" viewBox="0 0 24 24"><path d="M21 12H3m3-3-3 3 3 3" style="fill:none;stroke:#fff;stroke-linecap:round;stroke-linejoin:round;stroke-width:1.5"/></svg>
+                </div>
+                <div class="w-12 bg-white h-0.5"></div>
+                <div class="customNextBtn h-full group flex cursor-pointer items-center relative">
+                    <p class="cursor-pointer group-hover:-translate-y-8 transition-all ease-in w-full py-3 ">Next</p>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon line w-10 absolute h-10 hidden group-hover:block rotate-180" viewBox="0 0 24 24"><path d="M21 12H3m3-3-3 3 3 3" style="fill:none;stroke:#fff;stroke-linecap:round;stroke-linejoin:round;stroke-width:1.5"/></svg>
+                </div>
+            </div>
+            
+           
+            
+            <div class="owl-carousel owl-theme">
+                
+                
+             
+                <div class="text-black w-4  my-3 h-96 pt-8 md:pt-16 w-full my-14 md:w-7/12 w-4 my-14 sm:w-full  mx-auto bg-custom-red hover:bg-custom-wine bg-custom-red border border-gray-500 bg-cover bg-no-repeat bg-center bg-fixed overflow-hidden hover:cursor-pointer hover:brightness-100">
+                    <div class="relative ">
+                        <h2 class="w-fit font-bold text-[34px] sm:text-[46px] md:text-[56px] font-garamond text-red mx-auto mb-0">Customer Review</h2>
+                        <p class="text-center">
+                            "Maracana Lounge is a hidden gem! The ambiance is so charming,
+                            <br> the cocktails are top-notch, and the live<br> music added the perfect touch to our night out."
+                        <div class="text-center my-3">
+                            <i class="fa-solid fa-user fa-2xl"></i>
+                            <p class="my-3">Stephen</p>
+                        </div>
+                    </div> 
+                </div>
+                <div class="text-black w-4  my-3 h-96 pt-8 md:pt-16 w-full my-14 md:w-7/12 w-4 my-14 mx-auto  border border-gray-500 bg-cover bg-no-repeat bg-center bg-fixed overflow-hidden hover:cursor-pointer hover:bg-custom-wine bg-custom-red">
+                    <div class="relative  ">
+                        <h2 class="w-fit font-bold text-[34px] sm:text-[46px] md:text-[56px] font-garamond text-red mx-auto mb-0">Customer Review</h2>
+                        <p class="text-center">
+                            "Ladies Night at Maracana Lounge was a blast! The free cocktails and
+                            ,<br> makeup touch-ups made us feel like royalty.<br> A fun and memorable evening with my girls!"
+                        <div class="text-center my-3">
+                            <i class="fa-solid fa-user fa-2xl"></i>
+                            <p class="my-3">Daniel</p>
+                        </div>
+                    </div> 
+                </div>
+                <div class="text-black w-4  my-3 h-96 pt-8 md:pt-16 w-full my-14 md:w-7/12 w-4 my-14  mx-auto bg-custom-red hover:bg-custom-wine bg-custom-red border border-gray-500 bg-cover bg-no-repeat bg-center bg-fixed overflow-hidden hover:cursor-pointer hover:brightness-100">
+                    <div class="relative ">
+                        <h2 class="w-fit font-bold text-[34px] sm:text-[46px] md:text-[56px] font-garamond text-red mx-auto mb-0">Customer Review</h2>
+                        <p class="text-center">
+                            "Maracana Lounge exceeded my expectations!<br>
+                             The mocktails were equally impressive as their alcoholic counterparts,<br>
+                              making it a great spot for non-drinkers like me."
+                        <div class="text-center my-3">
+                            <i class="fa-solid fa-user fa-2xl"></i>
+                            <p class="my-3">Tolu</p>
+                        </div>
+                    </div> 
+                </div>
+                <div class="text-black w-4  my-3 h-96 pt-8 pt-8 md:pt-16 w-full my-14 md:w-7/12 w-4 my-14  mx-auto bg-custom-red hover:bg-custom-wine bg-custom-red border border-gray-500 bg-cover bg-no-repeat bg-center bg-fixed overflow-hidden hover:cursor-pointer hover:brightness-100">
+                    <div class="relative ">
+                        <h2 class="w-fit font-bold text-[34px] sm:text-[46px] md:text-[56px] font-garamond text-red mx-auto mb-0">Customer Review</h2>
+                        <p class="text-center">
+                            "The live DJ at Maracana Lounge<br> really knew how to get the crowd moving.<br>
+                             Awesome music, great drinks, and an overall fantastic vibe!"
+                        <div class="text-center ">
+                            <i class="fa-solid fa-user fa-2xl"></i>
+                            <p class="my-3">Stellar</p>
+                        </div>
+                    </div> 
+                </div>
+                <div class="text-black w-4  my-3 h-96 pt-8 pt-8 md:pt-16 w-full my-14 md:w-7/12 w-4 my-14  mx-auto bg-custom-red  hover:bg-custom-wine bg-custom-red border border-gray-500 bg-cover bg-no-repeat bg-center bg-fixed overflow-hidden hover:cursor-pointer hover:brightness-100">
+                    <div class="relative md:relative  ">
+                        <h2 class="w-fit font-bold text-[34px] sm:text-[46px] md:text-[56px] font-garamond text-red mx-auto mb-0">Customer Review</h2>
+                        <p class="text-center">
+                            "The food and drinks at Maracana Lounge are superb!<br> It's the perfect place to unwind after<br> work or celebrate with friends."
+                        <div class="text-center my-3">
+                            <i class="fa-solid fa-user fa-2xl"></i>
+                            <p class="my-3">Seyi</p>
+                        </div>
+                    </div> 
+                </div>
+                
+            </div>
+                 
+        </div>
+    </div>
+    <div class=" relative h-fit bg-white">
+        <div class=" h-fit w-11/12 py-8 md:py-16 mx-auto space-y-3">
+            <div class="w-fit mx-auto md:ml-0 flex flex-row items-center gap-3 mb-2" data-aos="slide-right"
+            data-aos-duration="900"
+            data-aos-easing="ease-out-quart">
+                <div class="w-10 h-1 bg-custom-red rounded-full"> </div>
+                <h1 class="w-fit font-bold text-[34px] sm:text-[46px] md:text-[56px] font-garamond mt-0 pt-0 mb-0 py-0" >Latest News</h1>
+                <div class="w-10 h-1 bg-custom-red rounded-full"> </div>
+            </div>
+            <div class="">
+                <div class="flex flex-row gap-8 align-baseline">
+                    <p class="text-base font-medium mb-5" data-aos="zoom-out"
+                    data-aos-duration="900"
+                    data-aos-easing="ease-out-quart">
+                        Welcome to Our Latest News and Updates Section, Your go to destination for staying up to date about the most
+                        relevant and captivating happenings from Maracana Lounge.
+                        <!-- Our mission is to continue to design sports related projects, corporate branding strategy and
+                        create profitable platforms for our clients through innovations,
+                        application of technology and real time engagement of professionals in the industry to deliver transparent and seamless sport projects. 
+                        Our vision is to use sports, culture and effective marketing communication to create a common bond among people, nations and its private sector economy through the development of 
+                        sustainable and competitive platforms for mutually beneficial collaborations.-->
+                    </p>
+                   <a href=""> <p class="hidden md:block px-6 py-3 border border-gray-500 min-w-fit cursor-pointer text-base discover-button  backdrop-blur-sm text-black font-semibold h-fit">Discover</p></a>
+                   </div>
+                <div class="mb-3 group service_container" data-aos="slide-up"
+                data-aos-duration="900"
+                data-aos-easing="ease-out-quart">
+                    <div class="py-3 border-b cursor-pointer flex flex-row justify-between">
+                        <p class="font-semibold text-base text-custom-red group-active:text-gray-500 md:group-hover:text-gray-500" >Thursday's Karaoke Night</p>
+                        <div class="group-active:bg-gray-500 md:group-hover:bg-gray-500 arrow-icon">
+                            <!-- <p class="font-semibold text-base text-custom-red ">Marketing and Brand Communication</p> -->
+                            <span class="left-bar"></span>
+                            <span class="right-bar"></span>
+                        </div>
+                    </div>
+                    <div class="dropdown_info transition-all ease-in-out">
+                        <p class="py-3"> 
+                            Join us this Thursday at Maracana Lounge for an electrifying Karaoke Night filled with music, laughter, and unforgettable performances!  
+                        </p>
+                    </div>
+                </div>
+                <div class="mb-3 group service_container" data-aos="slide-up"
+                data-aos-duration="900"
+                data-aos-easing="ease-out-quart">
+                    <div class="py-3 border-b cursor-pointer flex flex-row justify-between">
+                        <p class="font-semibold text-base text-custom-red group-active:text-gray-500 md:group-hover:text-gray-500">Wednesdays Ladies Night</p>
+                        <div class="group-active:bg-gray-500 md:group-hover:bg-gray-500 arrow-icon">
+                            <span class="left-bar"></span>
+                            <span class="right-bar"></span>
+                        </div>
+                    </div>
+                    <div class="dropdown_info">
+                        <p class="py-3"> 
+                            Ladies, get ready to unwind and indulge in a night of pure fun and fabulousness every Wednesday at
+                             Maracana Lounge's Ladies Night! Enjoy special drinks, great company, and an unforgettable evening.
+                        </p>
+                    </div>
+                </div>
+                <div class="mb-3 group service_container" data-aos="slide-up"
+                data-aos-duration="900"
+                data-aos-easing="ease-out-quart">
+                    <div class="py-3 border-b cursor-pointer flex flex-row justify-between">
+                        <p class="font-semibold text-base text-custom-red group-active:text-gray-500 md:group-hover:text-gray-500">Fridays: Good Vibes Night</p>
+                        <div class="group-active:bg-gray-500 md:group-hover:bg-gray-500 arrow-icon">
+                            <span class="left-bar"></span>
+                            <span class="right-bar"></span>
+                        </div>
+                    </div>
+                    <div class="dropdown_info">
+                        <p class="py-3"> 
+                            Kickstart your weekend on a high note with "Good Night Fridays" at Maracana Lounge - the perfect blend of music, drinks, and good vibes to bid farewell to the week in style!</p>
+                    </div>
+                </div>
+                <div class="mb-3 group service_container" data-aos="slide-up"
+                data-aos-duration="900"
+                data-aos-easing="ease-out-quart">
+                    <div class="py-3 border-b cursor-pointer flex flex-row justify-between">
+                        <p class="font-semibold text-base text-custom-red group-active:text-gray-500 md:group-hover:text-gray-500">Fashion Show</p>
+                        <div class="group-active:bg-gray-500 md:group-hover:bg-gray-500 arrow-icon">
+                            <span class="left-bar"></span>
+                            <span class="right-bar"></span>
+                        </div>
+                    </div>
+                    <div class="dropdown_info">
+                        <p class="py-3"> 
+                           Witness the latest trends and styles on the runaway during our glamorous fashion show event</p>
+                    </div>
+                </div>
+                <div class="mb-3 group service_container" data-aos="slide-up"
+                data-aos-duration="900"
+                data-aos-easing="ease-out-quart">
+                    <div class="py-3 border-b cursor-pointer flex flex-row justify-between">
+                        <p class="font-semibold text-base text-custom-red group-active:text-gray-500 md:group-hover:text-gray-500">Sunday: Maracana  Club Night</p>
+                        <div class="group-active:bg-gray-500 md:group-hover:bg-gray-500 arrow-icon">
+                            <span class="left-bar"></span>
+                            <span class="right-bar"></span>
+                        </div>
+                    </div>
+                    <div class="dropdown_info">
+                        <p class="py-3"> 
+                            Sundays just got hotter! Join us at Maracana Lounge for an electrifying Night Club experience, featuring pulsating beats,
+                             signature cocktails, and a night of revelry you won't want to miss!    
+                        </p>
+                    </div>
+                </div>
+                <div class="mb-3 group service_container" data-aos="slide-up"
+                data-aos-duration="900"
+                data-aos-easing="ease-out-quart">
+                    <div class="py-3 border-b cursor-pointer flex flex-row justify-between">
+                        <p class="font-semibold text-base text-custom-red group-active:text-gray-500 md:group-hover:text-gray-500">Charity Drive</p>
+                        <div class="group-active:bg-gray-500 md:group-hover:bg-gray-500 arrow-icon">
+                            <span class="left-bar"></span>
+                            <span class="right-bar"></span>
+                        </div>
+                    </div>
+                    <div class="dropdown_info">
+                        <p>
+                            Join us in supporting a noble cause as we collect donations for the local community. Drop off 
+                        non-perishable food items, clothings, and school suppliesat designated locations</p>
+                    </div>
+                </div>
+              <a href="">  <p class="md:hidden block px-6 py-3 border border-gray-500 w-fit mx-auto cursor-pointer text-base discover-button mt-8 backdrop-blur-sm text-black font-semibold h-fit">Read More</p></a> 
+            </div>       
+        </div>
+    </div>
+    <div class=" bg-contact-image bg-center bg-cover bg-no-repeat bg-fixed ode">
+        <div class=" w-11/12 mx-auto text-white flex flex-col md:flex-row justify-between items-center">
+            <div class="py-8 md:py-16" data-aos="zoom-out"
+            data-aos-duration="900"
+            data-aos-easing="ease-out-quart">
+                <h1 class="w-fit font-bold text-[34px] sm:text-[46px] md:text-[56px] max-w-[650px] font-garamond text-custom-red leading-none mb-3">Your Ultimate Destination</h1>
+                <p class="max-w-[650px] text-2xl py-3">Discover a world of Endless Experiences.</p>
+                <div class="">
+                    <span class="my-3 hover:bg-custom-red"><p class="text-[20px] my-3"><i class="fa-solid fa-phone fa-bounce fa-xl"></i> <a href="tel:+2349136432811" class="hover:text-custom-red">09136432811</a></p></span>
+                    <span class="my-3 hover:bg-custom-red"><p class="text-[20px] my-3"><i class="fa-brands fa-instagram fa-bounce fa-xl"></i> <a href="http://instagram.com/maracanaloungebar?igshid=MzRIODBiNWFIZA==" class="hover:text-custom-red">@maracanaloungebar</a></p></span>
+                    <span class="my-3 hover:bg-custom-red"><p class="text-[20px] my-3"><i class="fa-solid fa-location-pin fa-bounce fa-xl"></i> <a href="" class="hover:text-custom-red">14, awolowo road bodija, Ibadan, Nigeria</a></p></span>
+                   
+                    <a class="w-fit h-fit" href="mailto:adediranstephen2000@gmail.com">
+                        <p class="px-6 py-4 border border-gray-500 w-fit cursor-pointer text-base discover-button bg-dark-bg backdrop-blur-sm text-white font-medium">Send us an Email</p>
+                    </a>
+                </div>
+
+                <div class="pt-8 w-fit md:pt-8 h-screen place-item-center    relative sm:left-2 md:right-24">
+                    <div>
+                        <h2 class="w-fit font-bold text-[34px] sm:text-[46px] md:text-[56px] max-w-[650px]  font-garamond text-white leading-none mb-3">Reservation Request</h2>
+                        <p class="text-2xl sm:text-xl">Reserve your spot here</p>
+                        
+                    </div>
+                    <div>
+                        <form action="your-server-url" method="post" class="right-24">
+                            <label for="email"></label>
+                            <input type="email" id="email" name="email" placeholder="Joe@gmail.com" required class="w-80 sm:w-80 h-14 my-3 px-3 bg-transparent  border border-gray-500">
+                            <br>
+                            <label for="fname"></label>
+                            <input type="text" id="Fname" name="Fname" placeholder="Joe" required class="w-80 h-14 my-3 px-3 bg-transparent  border border-gray-500">
+                            <br>
+                            <label for="Lname"></label>
+                            <input type="text" id="Lname" name="Lname" placeholder="Doe" required class="w-80 h-14 my-3 px-3 bg-transparent  border border-gray-500">
+                            <br>
+                            <label for="message"></label>
+                            <textarea id="message" name="message" placeholder="How can we Help you?" rows="4"  class="my-3 cols-50  px-3 bg-transparent  border border-gray-500 ode1"></textarea>
+                            <br>
+                            <input type="submit" value="Submit" class="px-6 py-4 border border-gray-500 w-fit cursor-pointer text-base discover-button bg-dark-bg backdrop-blur-sm text-white font-medium mx-auto">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+           
+            <!-- <div class="space-y-3">
+                <p>Address: Plot 59 A, Crescent Fynstone Estate Sahara Homes, Gwarinpa, Abuja.</p>
+                <p>Email: info.cleanimage@gmail.com</p>
+                <p>Tel: +2348023108365, +2348078871506</p>
+            </div> -->
+        </div>
+    </div>
+    <footer class="pt-8 md:pt-16 pb-5 ">
+        <div class="w-11/12 mx-auto flex flex-col md:flex-row gap-4 md:gap-0 md:justify-between md:items-start " data-aos="slide-up"
+        data-aos-duration="900"
+        data-aos-easing="ease-out-quart">
+            <div>
+                <div>
+                    <img src="./src/images/image0__2_-removebg-preview.png" class="w-12 h-20 mb-3.5 alt="">
+                    <p class="text-sm text-white font-medium w-full md:max-w-[350px]">Welcome to Maracana , where parties, entertainment, and fun come together in perfect harmony.</p>
+                </div>
+            </div>
+            <div class="w-fit mx-auto md:mx-0 text-white space-y-3 font-medium"> 
+                <p class="font-semibold mx-auto mt-3 md:mt-0 md:mx-0 text-center md:text-left">Quick Links</p>
+                <div class="flex flex-col items-center md:items-start gap-2 text-sm mx-auto md:mx-0 text-center md:text-left"> 
+                    <a href="" class="w-fit h-fit"> <p class="cursor-pointer active:text-custom-red md:hover:text-custom-red">Home</p> </a>
+                    <a href="" class="w-fit h-fit"><p class="cursor-pointer active:text-custom-red md:hover:text-custom-red">About</p></a>
+                    <a href="" class="w-fit h-fit"> <p class="cursor-pointer active:text-custom-red md:hover:text-custom-red">Gallery</p></a>
+                    <a href="" class="w-fit h-fit"> <p class="cursor-pointer active:text-custom-red md:hover:text-custom-red">Menu</p></a>
+                    <a href="" class="w-fit h-fit"> <p class="cursor-pointer active:text-custom-red md:hover:text-custom-red">Latest News</p></a>
+                </div>  
+                <div class="flex flex-row gap-3">
+                    <div class="w-8 border border-gray-900 discover-button cursor-pointer flex flex-row justify-center items-center p-2 active:bg-custom-red hover:bg-custom-red"><img class="w-4" src='./src/images/facebookicon.png' alt='socials'/></div>
+                    <div class="w-8 border border-gray-900 discover-button cursor-pointer flex flex-row justify-center items-center p-2 active:bg-custom-red hover:bg-custom-red"><img class="w-4" src='./src/images/twittericon.png' alt='socials'/></div>
+                    <div class="w-8 border border-gray-900 discover-button cursor-pointer flex flex-row justify-center items-center p-2 active:bg-custom-red hover:bg-custom-red"><img class="w-5" class='smallericon' src='./src/images/linkedinicon.png' alt='socials'/></div>
+                </div>              
+            </div>
+        </div>
+        <div class="w-11/12 mx-auto text-white pt-5">
+            <p class="mx-auto w-fit text-sm">© 2023 Maracana Lounge. All rights reserved.</p>
+        </div>
+    </footer>
+    <!-- We partner with you to continually evolve and optimize to reflect the changing needs of your business. -->
+    
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js" integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js" type="text/javascript"></script>
+  <script>jQuery.noConflict(true);</script>
+  <script src="./src/script.js"></script>
+  <script>
+    $('.owl-carousel').owlCarousel({
+        items : 1,
+        mouseDrag: true,
+        touchDrag: true,
+        
+        autoHeight: true,
+        
+        animateOut: false,
+        animateIn: false,
+        autoplayHoverPause:false,
+        stopOnHover:false,
+        
+        lazyLoad : false,
+        loop: true,
+        
+        autoplay : true,
+        autoplayTimeout: 5000,
+        autoplayHoverPause: true,
+        autoplaySpeed: 500,
+        
+        nav : false,
+        navSpeed : 500,
+        navText: [ '', '' ],
+        
+        dots: false,
+        dotsSpeed : 500,
+        
+        responsiveClass: true,
+        responsive:{
+        0:{
+            nav:false
+        },
+        450:{
+            nav : false
+        },
+        
+    }
+    })
+    var owl = $('.owl-carousel');
+    owl.owlCarousel();
+    $('.customNextBtn').click(function() {
+        owl.trigger('next.owl.carousel');
+    })
+    // Go to the previous item
+    $('.customPrevBtn').click(function() {
+        owl.trigger('prev.owl.carousel');
+    })
+    owl.on('changed.owl.carousel', function(property) {
+        var currentIndex = property.item.index - 1;
+        var count = property.item.count;
+        if (currentIndex > count) {
+            currentIndex -= count;
+        }
+        if (currentIndex <= 0) {
+            currentIndex += count;
+        }
+        $('#currentSlide').text(currentIndex);
+    })
+    // $( ".arrow-icon" ).click(function() {
+    //     $(this).toggleClass("open");
+    // });
+    $( ".service_container" ).click(function() {
+        $(this).toggleClass("open");
+    });
+  </script>
+  <script> 
+    // Look for .hamburger and sidebar7
+    let toggled = false;
+    var hamburger = document.querySelector(".hamburger");
+    var sideBar = document.querySelector(".sideBar");
+    // On click
+    hamburger.addEventListener("click", function() {
+      // Toggle class "is-active"
+      hamburger.classList.toggle("is-active");
+      hamburger.classList.toggle("fixed");
+
+      hamburger.classList.toggle("right-[4.2%]");
+      hamburger.classList.toggle("top-6");
+      sideBar.classList.toggle("hidden");
+      // Do something else, like open/close menu
+      if (toggled){
+        // sideBar.classList.toggle("hidden");
+        sideBar.classList.toggle("in-circle-swoop");
+      }else{
+        // sideBar.classList.toggle("hidden");
+        sideBar.classList.toggle("out-circle-swoop");
+      }
+    //   document.body.classList.toggle('lock-scroll');
+    });
+    
+    window.addEventListener("load", function(){
+        $(".preloader_bg").fadeToggle();
+        // $("#bg_video")[0].pause();
+        $("#bg_video")[0].play();
+        const videoElement = document.getElementById('bg_video');
+
+        videoElement.addEventListener('suspend', () => {
+            videoElement.play();
+        });
+        // $("#bg_video")[0].addEventListener('play', () => {
+        //     // $("#bg_video")[0].play();
+        //     console.log("Playing")
+        // });
+        
+        if (videoElement.playing) {
+            // video is already playing so do nothing
+        }
+        else {
+            // video is not playing
+            // so play video now
+            videoElement.play();
+        }
+    })
+
+
+
+  </script>
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init({ once: true });
+  </script>
+</body>
+</html>
